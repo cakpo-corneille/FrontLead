@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-body), sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 180 5% 98%;
+    --foreground: 224 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 10% 10%;
+    --primary: 224 64% 33%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 15% 94%;
+    --secondary-foreground: 224 10% 10%;
+    --muted: 210 15% 94%;
+    --muted-foreground: 224 5% 45%;
+    --accent: 159 64% 52%;
+    --accent-foreground: 224 10% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 10% 89%;
+    --input: 210 10% 89%;
+    --ring: 224 64% 33%;
+    --radius: 0.5rem;
+
+    --chart-1: hsl(var(--primary));
+    --chart-2: hsl(262, 80%, 58%);
+    --chart-3: hsl(var(--accent));
+    --chart-4: hsl(224, 76%, 58%); 
+    --chart-5: hsl(262, 76%, 58%);
+  }
+
+  .dark {
+    --background: 224 10% 10%;
+    --foreground: 210 20% 98%;
+    --card: 224 10% 12%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 10% 10%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 224 10% 10%;
+    --secondary: 224 10% 15%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 224 10% 15%;
+    --muted-foreground: 210 10% 60%;
+    --accent: 159 64% 52%;
+    --accent-foreground: 224 10% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 224 10% 20%;
+    --input: 224 10% 20%;
+    --ring: 159 64% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar-scroll-area {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.sidebar-scroll-area:hover {
+    scrollbar-color: #374151 transparent; /* Correspond à gray-700 */
+}
+
+.sidebar-scroll-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-scroll-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-scroll-area::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.sidebar-scroll-area:hover::-webkit-scrollbar-thumb {
+    background-color: #374151; /* Correspond à gray-700 */
+}
