@@ -72,8 +72,11 @@ function CodeBlock({ snippet }: { snippet: string }) {
 
   const srcMatch = snippet.match(/src="([^"]*)"/);
   const keyMatch = snippet.match(/data-public-key="([^"]*)"/);
-  const srcUrl = srcMatch ? srcMatch[1] : '';
+  const macMatch = snippet.match(/data-mac="([^"]*)"/);
+  
+  const srcUrl    = srcMatch ? srcMatch[1] : '';
   const publicKey = keyMatch ? keyMatch[1] : '';
+  const dataMac   = macMatch ? macMatch[1] : '$(mac)';
 
   return (
     <div className="relative group">
@@ -99,6 +102,11 @@ function CodeBlock({ snippet }: { snippet: string }) {
           <span className="text-teal-300">data-public-key</span>
           <span className="text-white">=</span>
           <span className="text-amber-300">"{publicKey}"</span>
+          <br />
+          {'  '}
+          <span className="text-teal-300">data-mac</span>
+          <span className="text-white">=</span>
+          <span className="text-amber-300">"{dataMac}"</span>
           <br />
           <span className="text-pink-400">&gt;&lt;/script&gt;</span>
         </code>
@@ -360,7 +368,7 @@ export default function IntegrationPage() {
                       </div>
                       <div className="flex items-start gap-3">
                         <div className="mt-1 h-4 w-4 rounded-full border-2 border-teal-500 flex-shrink-0" />
-                        <p className="text-sm text-gray-600 leading-relaxed">
+                        <p className="text-sm text-gray-600 font-medium leading-relaxed">
                           Testez la validation : l'overlay doit se fermer pour laisser place à votre portail d'origine.
                         </p>
                       </div>
