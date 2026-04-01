@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: wilead
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=2048
+      - key: BACKEND_API_URL
+        value: https://wileadback.up.railway.app

@@ -1,0 +1,51 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+/.idx
+# Dependencies
+# Avoid committing vendor dependencies to your repository
+/node_modules
+/.pnp
+.pnp.js
+
+# Build artifacts
+# Ignore build output and temporary files
+/.next/
+/out/
+/build
+
+# Testing
+# Ignore test coverage reports
+/coverage
+
+# Miscellaneous
+# Ignore system-specific files and sensitive credentials
+.DS_Store
+*.pem
+
+# Debug logs
+# Ignore log files generated during debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local Environment Variables
+# Exclude local environment variables, which may contain sensitive keys
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+# Ignore Vercel deployment-specific files
+.vercel
+
+# TypeScript
+# Ignore TypeScript build info and auto-generated type declarations
+*.tsbuildinfo
+next-env.d.ts
+
+# User-specific ignores
+# Custom files and folders added by the user
+LeadBack
+dump.rdb
+.modified
