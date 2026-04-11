@@ -47,7 +47,7 @@ export function ProofBar() {
   const stats = [
     { value: 10000, suffix: "+", label: "Leads collectés", icon: "👥", img: undefined },
     { value: 96, suffix: "%", label: "Taux de retour moyen", icon: "📈", img: undefined },
-    { value: 15, suffix: "+", label: "Modèles de routeurs", icon: null, img: "/mikrotik-router.png" },
+    { value: 15, suffix: "+", label: "Modèles de routeurs", icon: null, img: "/images/mikrotik-router.png" },
   ];
 
   return (

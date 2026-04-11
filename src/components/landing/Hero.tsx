@@ -102,7 +102,7 @@ function AfterPanel() {
 function DashboardPanel() {
   return (
     <div className="w-full rounded-2xl overflow-hidden shadow-2xl">
-      <img src="/wifileads-dashboard-hero.png" alt="Dashboard WiFiLeads" className="w-full block" />
+      <img src="/images/wifileads-dashboard-hero.png" alt="Dashboard WiFiLeads" className="w-full block" />
     </div>
   );
 }
@@ -191,7 +191,7 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-[95vh] flex items-center pt-20 pb-16 overflow-hidden"
+      className="relative min-h-[95vh] flex items-center pt-5 pb-16 overflow-hidden"
       style={{ background: "linear-gradient(135deg,#0F172A 0%,#1E3A8A 60%,#1e40af 100%)" }}
     >
       <div

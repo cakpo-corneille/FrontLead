@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { Check, Zap } from "lucide-react";
 import { useInView } from "../../hooks/useInView";
 
@@ -9,6 +10,7 @@ const plans = [
     period: "",
     description: "Pour tester WiFiLeads sur votre commerce",
     cta: "Commencer gratuitement",
+    href: "/signup",
     ctaStyle: "border",
     features: [
       "1 point d'accès WiFi",
@@ -25,6 +27,7 @@ const plans = [
     period: "FCFA/mois",
     description: "Pour les commerçants qui veulent aller plus loin",
     cta: "Démarrer le Pro",
+    href: "/signup",
     ctaStyle: "solid",
     features: [
       "3 points d'accès WiFi",
@@ -43,6 +46,7 @@ const plans = [
     period: "FCFA/mois",
     description: "Pour les chaînes et les hôtels multi-sites",
     cta: "Contacter l'équipe",
+    href: "mailto:contact@wifileads.com",
     ctaStyle: "border",
     features: [
       "Points d'accès illimités",
@@ -124,8 +128,8 @@ export function Pricing() {
                 </div>
               </div>
 
-              <a
-                href="#"
+              <Link
+                href={plan.href}
                 className={`block w-full text-center py-3 rounded-xl font-semibold text-sm mb-8 transition-all hover:opacity-90 ${
                   plan.popular
                     ? 'text-slate-900'
@@ -148,7 +152,7 @@ export function Pricing() {
                 }}
               >
                 {plan.cta}
-              </a>
+              </Link>
 
               <ul className="space-y-3">
                 {plan.features.map((feature, j) => (

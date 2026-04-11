@@ -83,13 +83,12 @@ export default function OnboardingPage() {
   const handleLogoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      if (file.size > 2 * 1024 * 1024) {
-        toast({ variant: 'destructive', title: 'Erreur', description: 'Le logo est trop volumineux (max 2MB).' });
+      if (file.size > 5 * 1024 * 1024) {
+        toast({ variant: 'destructive', title: 'Erreur', description: 'Le logo est trop volumineux (max 5MB).' });
         return;
       }
-      const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/svg+xml'];
-      if (!allowedTypes.includes(file.type)) {
-        toast({ variant: 'destructive', title: 'Erreur', description: 'Format de fichier non supporté.' });
+      if (!file.type.startsWith('image/')) {
+        toast({ variant: 'destructive', title: 'Erreur', description: 'Veuillez sélectionner une image valide.' });
         return;
       }
       setFormData(prev => ({ ...prev, logoFile: file }));
@@ -221,8 +220,8 @@ export default function OnboardingPage() {
                 <div className="space-y-2">
                   <Label htmlFor="logo">Logo <span className="text-red-500">*</span></Label>
                   <label htmlFor="logo" className="relative flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer bg-muted hover:bg-muted/80">
-                    {logoPreview ? <Image src={logoPreview} alt="Aperçu du logo" fill className="object-contain p-2 rounded-lg" /> : <div className="flex flex-col items-center justify-center pt-5 pb-6"><UploadCloud className="w-8 h-8 mb-4 text-muted-foreground" /><p className="mb-2 text-sm text-muted-foreground"><span className="font-semibold">Cliquez pour télécharger</span></p><p className="text-xs text-muted-foreground">SVG, PNG, JPG (MAX. 2Mo)</p></div>}
-                    <Input id="logo" name="logo" type="file" className="hidden" accept="image/*" onChange={handleLogoChange} />
+                    {logoPreview ? <Image src={logoPreview} alt="Aperçu du logo" fill className="object-contain p-2 rounded-lg" /> : <div className="flex flex-col items-center justify-center pt-5 pb-6"><UploadCloud className="w-8 h-8 mb-4 text-muted-foreground" /><p className="mb-2 text-sm text-muted-foreground"><span className="font-semibold">Cliquez pour télécharger</span></p><p className="text-xs text-muted-foreground">Toutes images (MAX. 5Mo)</p></div>}
+                    <Input id="logo" name="logo" type="file" className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" accept="image/*" onChange={handleLogoChange} />
                   </label>
                 </div>
               </div>

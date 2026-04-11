@@ -15,8 +15,8 @@ export function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50"
-      style={{ height: "60px", backgroundColor: "#0F172A" }}
+      className="sticky top-0 z-50 w-full shrink-0"
+      style={{ height: "72px", backgroundColor: "#0F172A" }}
     >
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
 
@@ -45,7 +45,7 @@ export function Navbar() {
         `}</style>
         <a href="#" className="flex items-center gap-2">
           <img
-            src="/wifileads-logo-nobg.png"
+            src="/images/wifileads-logo-nobg.png"
             alt="WiFiLeads"
             className="w-9 h-9 object-contain"
           />

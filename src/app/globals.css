@@ -95,20 +95,32 @@ body {
     background-color: #374151; /* Correspond à gray-700 */
 }
 
-/* LANDING PAGE CUSTOM SCROLLBAR */
+/* LANDING PAGE CUSTOM SCROLLBAR - DARK THEME */
+.landing-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #0F172A; /* Firefox : couleur du curseur, puis de la piste */
+}
+
 .landing-scrollbar::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
+
 .landing-scrollbar::-webkit-scrollbar-track {
-  background: #0F172A; /* Match the dark theme bg */
+  background: #0F172A; /* Couleur de fond qui correspond à votre header et thème */
 }
+
 .landing-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #334155; 
+  background-color: #1E293B; /* Curseur assez discret par défaut */
   border-radius: 10px;
-  border: 3px solid #0F172A; /* Create a padded floating effect */
+  border: 2px solid #0F172A; /* Bordure asymétrique pour créer un espace avec la piste */
 }
+
+/* Le curseur s'illumine légèrement au survol */
 .landing-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #475569;
+  background-color: #475569; 
+}
+.landing-scrollbar::-webkit-scrollbar-thumb:active {
+  background-color: #64748B;
 }
 
 /* LANDING PAGE TYPOGRAPHY & ANIMATIONS */

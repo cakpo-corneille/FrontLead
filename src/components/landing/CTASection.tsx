@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { ArrowRight, Wifi } from "lucide-react";
 import { useInView } from "../../hooks/useInView";
 
@@ -40,14 +41,14 @@ export function CTASection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#"
+          <Link
+            href="/signup"
             className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 hover:scale-105"
             style={{ background: '#34D399', color: '#0F172A' }}
           >
             Créer mon compte gratuit
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
           <a
             href="#faq"
             className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl font-bold text-base text-white border border-white/20 hover:border-white/40 transition-all"
