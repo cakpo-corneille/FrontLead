@@ -55,9 +55,8 @@ function CodeBlock({ snippet }: { snippet: string }) {
   const { toast } = useToast();
 
   const handleCopy = async () => {
-    const textToCopy = snippet.trim();
     try {
-      await navigator.clipboard.writeText(textToCopy);
+      await navigator.clipboard.writeText(snippet.trim());
       toast({ title: 'Copié!', description: 'Le code a été copié dans le presse-papiers.' });
     } catch {
       toast({ variant: 'destructive', title: 'Erreur', description: 'Impossible de copier le code.' });
@@ -101,8 +100,9 @@ function CodeBlock({ snippet }: { snippet: string }) {
           <span className="text-sky-300">data-mac</span>
           <span className="text-gray-400">=</span>
           <span className="text-amber-300">"{dataMac}"</span>
+          <span className="text-pink-400">&gt;</span>
           <br />
-          <span className="text-pink-400">&gt;&lt;/script&gt;</span>
+          <span className="text-pink-400">&lt;/script&gt;</span>
         </code>
       </pre>
     </div>

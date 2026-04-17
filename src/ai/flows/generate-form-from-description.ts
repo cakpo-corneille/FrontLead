@@ -59,7 +59,6 @@ Based on the user's description, create a valid JSON object that represents the 
 **Important Constraints:**
 
 * The total number of fields generated **must not exceed 5**.
-* The form **must** include at least one field of type 'email' or 'phone'. This is a mandatory requirement.
 
 **Example of the expected JSON output format:**
 \`\`\`json

@@ -46,6 +46,7 @@ import {
   Pencil,
   UploadCloud,
   X,
+  Hash,
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -68,6 +69,7 @@ const FIELD_TYPE_META: Record<string, { label: string; icon: React.ElementType; 
   text:    { label: 'Texte',          icon: Type,       color: 'bg-blue-50 border-blue-200 text-blue-700' },
   email:   { label: 'E-mail',         icon: Mail,       color: 'bg-purple-50 border-purple-200 text-purple-700' },
   phone:   { label: 'Téléphone',      icon: Phone,      color: 'bg-green-50 border-green-200 text-green-700' },
+  number:  { label: 'Nombre',         icon: Hash,       color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
   choice:  { label: 'Sélecteur',      icon: List,       color: 'bg-orange-50 border-orange-200 text-orange-700' },
   boolean: { label: 'Case à cocher',  icon: ToggleLeft, color: 'bg-gray-50 border-gray-200 text-gray-700' },
 };
@@ -355,9 +357,10 @@ export default function FormBuilderEditorPage() {
     }
     const newId = `field_${Date.now()}`;
     let draft: EditableFormField = { id: newId, type, label: '', placeholder: '', required: false, name: `field_${Date.now()}` };
-    if (type === 'email')   draft = { ...draft, label: 'Email', placeholder: 'Entrez votre e-mail', name: 'email', required: true };
+    if (type === 'email')        draft = { ...draft, label: 'Email', placeholder: 'Entrez votre e-mail', name: 'email', required: true };
     else if (type === 'text')    draft = { ...draft, label: '', placeholder: 'Entrez du texte' };
     else if (type === 'phone')   draft = { ...draft, label: 'Téléphone', placeholder: 'Entrez votre numéro', name: 'phone', required: true };
+    else if (type === 'number')  draft = { ...draft, label: '', placeholder: 'Ex: 25' };
     else if (type === 'choice')  draft = { ...draft, label: '', placeholder: 'Choisissez une option', choices: ['Option 1', 'Option 2'] };
     else if (type === 'boolean') draft = { ...draft, label: '', name: `consent_${newId}`, required: true };
     setDraftField(draft);
