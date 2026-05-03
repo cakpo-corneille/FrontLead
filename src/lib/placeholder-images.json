@@ -1,0 +1,40 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A modern cafe with people using laptops, representing a guest WiFi environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1611653683150-cb048456cc4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBjYWZlfGVufDB8fHx8MTc2OTA4OTIxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern cafe"
+    },
+    {
+      "id": "avatar",
+      "description": "A placeholder for a user avatar.",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjkxNzMxMTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "form-templates-background",
+      "description": "A captive portal screen with a custom background.",
+      "imageUrl": "https://images.unsplash.com/photo-1611653683150-cb048456cc4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBjYWZlfGVufDB8fHx8MTc2OTA4OTIxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "captive portal"
+    },
+    {
+      "id": "integration-step-1",
+      "description": "Screenshot showing where to paste the HTML code in a router's web interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1548544027-1a96c4c24c7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyb3V0ZXIlMjBjb25maWd8ZW58MHx8fHwxNzY5NTM1NzQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "router config"
+    },
+    {
+      "id": "integration-step-2",
+      "description": "Screenshot of a router's walled garden or pre-authorization settings.",
+      "imageUrl": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyb3V0ZXIlMjBzZXR0aW5nc3xlbnwwfHx8fDE3Njk1MzU3NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "router settings"
+    },
+    {
+      "id": "integration-step-3",
+      "description": "Image of a smartphone connected to WiFi with the captive portal appearing.",
+      "imageUrl": "https://images.unsplash.com/photo-1739111106652-05e726967d4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3aWZpJTIwcG9ydGFsfGVufDB8fHx8MTc2OTUzNTc0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wifi portal"
+    }
+  ]
+}
